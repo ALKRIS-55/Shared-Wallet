@@ -1,9 +1,11 @@
 //SPDX-License-Identifier: MIT
-pragma solidity 0.8.1;
+
+pragma solidity 0.6.1;
 
 import "./Ownable.sol"; 
 
 contract Allowance is Ownable{
+
     mapping(address => uint) public allowance;
 
     event ChangedAllowance(address indexed _from, address indexed _to, uint _previousamount, uint _updatedamount);
