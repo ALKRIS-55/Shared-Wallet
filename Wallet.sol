@@ -1,8 +1,14 @@
 //SPDX-License-Identifier: MIT
+
+pragma solidity 0.6.1;
+
 import "./Allowance.sol";
 import "./Ownable.sol";
+
 contract SharedWallet is Allowance{
+
     event Received(address indexed _from, uint _amount);
+    
     event Sent(address indexed _to, uint _amount);
 
     function receiveMoney() public payable{
