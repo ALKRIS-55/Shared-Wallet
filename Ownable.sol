@@ -12,7 +12,7 @@ contract Ownable{
         return(msg.sender == _owner);
     }
 
-    modifier onlyOwner(){
+    modifier OwnerAccess(){
         require(isOwner(), "Caller is not the owner!");
         _;
     }
